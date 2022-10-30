@@ -1,0 +1,247 @@
+@prefix : <http://www.semanticweb.org/tomerbar/ontologies/2022/9/untitled-ontology-4#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.dellva.io/ontology> .
+
+<http://www.dellva.io/ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.dellva.io/ontology#approve_pr
+:approve_pr rdf:type owl:ObjectProperty ;
+            rdfs:domain :user ;
+            rdfs:range :pullRequest .
+
+
+###  http://www.dellva.io/ontology#assigned_to
+:assigned_to rdf:type owl:ObjectProperty ;
+             rdfs:domain :issue ;
+             rdfs:range :user .
+
+
+###  http://www.dellva.io/ontology#block_issue
+:block_issue rdf:type owl:ObjectProperty ;
+             rdfs:domain :issue ;
+             rdfs:range :issue .
+
+
+###  http://www.dellva.io/ontology#contain_branch
+:contain_branch rdf:type owl:ObjectProperty ;
+                rdfs:domain :repository ;
+                rdfs:range :branch .
+
+
+###  http://www.dellva.io/ontology#created_pr
+:created_pr rdf:type owl:ObjectProperty ;
+            rdfs:domain :user ;
+            rdfs:range :pullRequest .
+
+
+###  http://www.dellva.io/ontology#has_board
+:has_board rdf:type owl:ObjectProperty ;
+           rdfs:domain :project ;
+           rdfs:range :board .
+
+
+###  http://www.dellva.io/ontology#has_branch
+:has_branch rdf:type owl:ObjectProperty ;
+            rdfs:domain :issue ;
+            rdfs:range :branch .
+
+
+###  http://www.dellva.io/ontology#has_commit
+:has_commit rdf:type owl:ObjectProperty ;
+            rdfs:domain :branch ;
+            rdfs:range :commit .
+
+
+###  http://www.dellva.io/ontology#has_member
+:has_member rdf:type owl:ObjectProperty ;
+            rdfs:domain :team ;
+            rdfs:range :user .
+
+
+###  http://www.dellva.io/ontology#has_repository
+:has_repository rdf:type owl:ObjectProperty ;
+                rdfs:domain :workspace ;
+                rdfs:range :repository .
+
+
+###  http://www.dellva.io/ontology#has_sprint
+:has_sprint rdf:type owl:ObjectProperty ;
+            rdfs:domain :board ;
+            rdfs:range :sprint .
+
+
+###  http://www.dellva.io/ontology#merged_to
+:merged_to rdf:type owl:ObjectProperty ;
+           rdfs:domain :branch ;
+           rdfs:range :branch .
+
+
+###  http://www.dellva.io/ontology#opened_branch
+:opened_branch rdf:type owl:ObjectProperty ;
+               rdfs:domain :user ;
+               rdfs:range :branch .
+
+
+###  http://www.dellva.io/ontology#pushed_commit
+:pushed_commit rdf:type owl:ObjectProperty ;
+               rdfs:domain :user ;
+               rdfs:range :commit .
+
+
+###  http://www.dellva.io/ontology#report_issue
+:report_issue rdf:type owl:ObjectProperty ;
+              rdfs:domain :user ;
+              rdfs:range :issue .
+
+
+###  http://www.dellva.io/ontology#reviewer_of
+:reviewer_of rdf:type owl:ObjectProperty ;
+             rdfs:domain :user ;
+             rdfs:range :pullRequest .
+
+
+###  http://www.dellva.io/ontology#write_comment
+:write_comment rdf:type owl:ObjectProperty ;
+               rdfs:domain :user ;
+               rdfs:range :comment .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.dellva.io/ontology#end_date
+:end_date rdf:type owl:DatatypeProperty ;
+          rdfs:domain :sprint ;
+          rdfs:range xsd:long .
+
+
+###  http://www.dellva.io/ontology#id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:domain :issue ,
+                :sprint ;
+    rdfs:range xsd:int .
+
+
+###  http://www.dellva.io/ontology#priority
+:priority rdf:type owl:DatatypeProperty ;
+          rdfs:domain :issue ;
+          rdfs:range xsd:int .
+
+
+###  http://www.dellva.io/ontology#self_source_url
+:self_source_url rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :issue ,
+                             :sprint ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.dellva.io/ontology#start_date
+:start_date rdf:type owl:DatatypeProperty ;
+            rdfs:domain :sprint ;
+            rdfs:range xsd:long .
+
+
+###  http://www.dellva.io/ontology#state
+:state rdf:type owl:DatatypeProperty ;
+       rdfs:domain :sprint ;
+       rdfs:range xsd:string .
+
+
+###  http://www.dellva.io/ontology#time_original_estimate
+:time_original_estimate rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :issue ;
+                        rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.dellva.io/ontology#bitbucket
+:bitbucket rdf:type owl:Class ;
+           rdfs:subClassOf :comment .
+
+
+###  http://www.dellva.io/ontology#board
+:board rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#branch
+:branch rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#bug
+:bug rdf:type owl:Class ;
+     rdfs:subClassOf :issue .
+
+
+###  http://www.dellva.io/ontology#comment
+:comment rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#commit
+:commit rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#epic
+:epic rdf:type owl:Class ;
+      rdfs:subClassOf :issue .
+
+
+###  http://www.dellva.io/ontology#issue
+:issue rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#jira
+:jira rdf:type owl:Class ;
+      rdfs:subClassOf :comment .
+
+
+###  http://www.dellva.io/ontology#project
+:project rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#pullRequest
+:pullRequest rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#repository
+:repository rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#sprint
+:sprint rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#story
+:story rdf:type owl:Class ;
+       rdfs:subClassOf :issue .
+
+
+###  http://www.dellva.io/ontology#task
+:task rdf:type owl:Class ;
+      rdfs:subClassOf :issue .
+
+
+###  http://www.dellva.io/ontology#team
+:team rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#user
+:user rdf:type owl:Class .
+
+
+###  http://www.dellva.io/ontology#workspace
+:workspace rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
