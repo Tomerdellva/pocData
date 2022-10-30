@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tomerbar/ontologies/2022/9/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/tomerbar/ontologies/2022/9/untitled-ontology-4"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.dellva.io/ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dellva.io/ontology#approve_pr -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#approve_pr">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#user"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#pullRequest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#assigned_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#assigned_to">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#issue"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#user"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#block_issue -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#block_issue">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#issue"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#issue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#contain_branch -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#contain_branch">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#repository"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#branch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#created_pr -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#created_pr">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#user"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#pullRequest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#has_board -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#has_board">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#project"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#board"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#has_branch -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#has_branch">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#issue"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#branch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#has_commit -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#has_commit">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#branch"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#commit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#has_member -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#has_member">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#team"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#user"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#has_repository -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#has_repository">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#workspace"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#repository"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#has_sprint -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#has_sprint">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#board"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#sprint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#merged_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#merged_to">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#branch"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#branch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#opened_branch -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#opened_branch">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#user"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#branch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#pushed_commit -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#pushed_commit">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#user"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#commit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#report_issue -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#report_issue">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#user"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#issue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#reviewer_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#reviewer_of">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#user"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#pullRequest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#write_comment -->
+
+    <owl:ObjectProperty rdf:about="http://www.dellva.io/ontology#write_comment">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#user"/>
+        <rdfs:range rdf:resource="http://www.dellva.io/ontology#comment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dellva.io/ontology#end_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dellva.io/ontology#end_date">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#sprint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dellva.io/ontology#id">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#issue"/>
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#sprint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#priority -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dellva.io/ontology#priority">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#issue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#self_source_url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dellva.io/ontology#self_source_url">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#issue"/>
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#sprint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#start_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dellva.io/ontology#start_date">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#sprint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#state -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dellva.io/ontology#state">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#sprint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dellva.io/ontology#time_original_estimate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dellva.io/ontology#time_original_estimate">
+        <rdfs:domain rdf:resource="http://www.dellva.io/ontology#issue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dellva.io/ontology#bitbucket -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#bitbucket">
+        <rdfs:subClassOf rdf:resource="http://www.dellva.io/ontology#comment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dellva.io/ontology#board -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#board"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#branch -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#branch"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#bug -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#bug">
+        <rdfs:subClassOf rdf:resource="http://www.dellva.io/ontology#issue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dellva.io/ontology#comment -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#comment"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#commit -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#commit"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#epic -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#epic">
+        <rdfs:subClassOf rdf:resource="http://www.dellva.io/ontology#issue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dellva.io/ontology#issue -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#issue"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#jira -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#jira">
+        <rdfs:subClassOf rdf:resource="http://www.dellva.io/ontology#comment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dellva.io/ontology#project -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#project"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#pullRequest -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#pullRequest"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#repository -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#repository"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#sprint -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#sprint"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#story -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#story">
+        <rdfs:subClassOf rdf:resource="http://www.dellva.io/ontology#issue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dellva.io/ontology#task -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#task">
+        <rdfs:subClassOf rdf:resource="http://www.dellva.io/ontology#issue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dellva.io/ontology#team -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#team"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#user -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#user"/>
+    
+
+
+    <!-- http://www.dellva.io/ontology#workspace -->
+
+    <owl:Class rdf:about="http://www.dellva.io/ontology#workspace"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
